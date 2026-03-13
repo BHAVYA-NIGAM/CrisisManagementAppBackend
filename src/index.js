@@ -21,7 +21,7 @@ import { bindIo } from "./services/realtime.js";
 const app = express();
 app.use(cors({ origin: config.clientOrigin === "*" ? true : config.clientOrigin }));
 app.use(express.json());
-
+app.get("/", (req, res) => {res.send("Server running");});
 app.get("/health", (_req, res) => res.json({ ok: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
