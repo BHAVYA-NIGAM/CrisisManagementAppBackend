@@ -17,6 +17,7 @@ import locationRoutes from "./routes/locations.js";
 import helpRoutes from "./routes/help.js";
 import profileRoutes from "./routes/profile.js";
 import { bindIo } from "./services/realtime.js";
+import axios from axios;
 
 const app = express();
 app.use(cors({ origin: config.clientOrigin === "*" ? true : config.clientOrigin }));
@@ -61,7 +62,7 @@ mongoose
     process.exit(1);
   });
 
-const axios = require('axios');
+
 
 const URL = 'https://crisismanagementappbackend.onrender.com';
 
