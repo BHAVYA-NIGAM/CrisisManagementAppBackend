@@ -17,7 +17,7 @@ import locationRoutes from "./routes/locations.js";
 import helpRoutes from "./routes/help.js";
 import profileRoutes from "./routes/profile.js";
 import { bindIo } from "./services/realtime.js";
-import axios from axios;
+import axios from "axios";
 
 const app = express();
 app.use(cors({ origin: config.clientOrigin === "*" ? true : config.clientOrigin }));
