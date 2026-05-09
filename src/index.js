@@ -60,3 +60,16 @@ mongoose
     console.error("MongoDB connection failed", err);
     process.exit(1);
   });
+
+const axios = require('axios');
+
+const URL = 'https://crisismanagementappbackend.onrender.com';
+
+setInterval(async () => {
+  try {
+    const response = await axios.get(URL);
+    console.log('Pinged successfully:', response.status);
+  } catch (err) {
+    console.log('Ping failed');
+  }
+}, 30000);
